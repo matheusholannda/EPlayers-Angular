@@ -1,70 +1,165 @@
+/* CSS Reset */
 .banner {
-    background-image: url(../../../assets/img/banner.png);
-    height: 600px;
+    height: 610px;    
+    
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
-.posicao-texto {
+.banner-f1 {
+    background-image: url(/assets/img/banner_pilotos.png);
+}
+
+.banner-cs {
+    background-image: url(/assets/img/banner_cs.png);
+}
+
+.banner-lol {
+    background-image: url(/assets/img/banner_lol.png);
+}
+
+.posicionamento-banner {
     height: 100%;
+    
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
-.texto-banner {
+.conteudo-banner {
     width: 495px;
+    height: 300px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
     color: white;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
+}
+
+.conteudo-banner a {
+    padding: 15px;
+
+    color: white;
+    background-color: #C31616;
+    border-radius: 5px;
+
+    font-family: "Roboto";
+    font-size: 25px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.conteudo-banner h1 {
+    font-family: "Titillium Web";
+    font-weight: bold;
+    font-size: 80px;
+}
+
+.conteudo-banner p {
+    font-family: "Roboto";
     font-size: 25px;
 }
 
-.texto-banner h1 {
-    font-family: 'Titillium Web', sans-serif;
-    font-size: 75px;
-    font-weight: bold;
-}
-
-.texto-banner p {
-    margin-bottom: 50px;
-}
-
-.texto-banner a {
-    text-transform: uppercase;
-    text-decoration: none;
-    background-color: #C31616;
-    padding: 15px;
-    color: white;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-
-.secao-jogos {
-    background-color: black;
-    height: 90px;
-}
-
 .jogos {
+    height: 120px;
+
+    background-color: black;
+}
+
+.posicionamento-jogos {
+    height: 100%;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
+    flex-wrap: wrap;
 }
 
-.jogos img {
-    width: 130px;
+.posicionamento-jogos img {
+    width: 150px;
 }
 
-.alinhar-centro {
-    height: 500px;
+.ofertas {
+    background-color: #1E1C21;
+    padding-top: 30px;
+}
+
+.ofertas h2 {
+    font-family: 'Roboto';
+    color: #fff;
+    font-size: 27px;
+}
+
+.espaco-produtos{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.cardnews{
+    width: 15em;
+    height: 22.5em;
+    background: linear-gradient(180deg, rgba(83, 83, 83, 0.5) 0%, #000000 100%);
+    color: #fff;
+    margin-bottom: 2em;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0),0px 0px 30px rgb(0, 0, 0);
+}
+
+.cardnews {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cardnews img {
+    width: 100%;
+}
+
+.texto-card {
+    width: 85%;
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.texto-card h3, .texto-card p {
+    margin: 0;
+}
+
+.cardnews h3{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.cardnews .preco {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.cardnews a {
+    width: 100%;
+    height: 35px;
+    text-align: center;
+    line-height: 2;
+    
+    background-color: #C31616;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 .secao-sobre {
-    background-image: url(../../../assets/img/fundo-sobre.png);
+    background-image: url(/assets/img/fundo-sobre.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -73,11 +168,12 @@
 .conteudo-sobre {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .texto-sobre {
     height: 100%;
-    width: 45%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -88,175 +184,48 @@
     margin-bottom: 2rem;
 }
 
-.secao-partidas {
-    background-color: black;
-    height: 90px;
-}
-
-.partidas {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-}
-
-.games-aovivo {
-    width: 300px;
-}
-
-.games-embreve {
-    width: 550px;
-}
-
-.games-aovivo, .games-embreve{
-    display: flex;
-    color:#fff;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.partidas h2 {
-    text-transform: uppercase;
-    font-size: 25px;
-}
-
-.partida{
-    width: 160px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.partida p {
-    margin-bottom: 0;
-}
-
-.time1, .time2{
-    display: flex;
-    align-items: center;
-}
-.partida img{
-    width: 1.8em;
-}
-.time1 img{
-    margin-left: 0.5em;
-}
-.time2 img{
-    margin-right: 0.5em;
-}
-
-.noticias {
-    display: flex;
-    justify-content: space-between;
-}
-
-.secao-noticias {
-    background-color: #1E1C21;
-    padding: 30px 0 ;
-}
-
-.secao-noticias .container {
-    display: flex;
-    justify-content: space-between;
-}
-
-.bloco-noticias{
-    width: 70%;
-    height: 90%;
-    color: white;
-}
-
-.bloco-noticias h2 {
-    font-size: 25px;
-}
-
-.content-news{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 25px;
-}
-
-.cardnews {
-    width: 15em;
-    height: 22.5em;
-    background: var(--gradient);
-    color: #fff;
-    margin-bottom: 2em;
-    box-shadow: 0px 0px 10px rgb(0, 0, 0),0px 0px 30px rgb(0, 0, 0);
-}
-
-.texto-card {
-    display: flex;
-    flex-direction: column;
-    height: 50%;
-    justify-content: space-around;
-    padding: 0 20px;
-}
-
-.texto-card a {
-    background-color: #C31616;
-    padding: 8px;
-    font-size: 18px;
-    text-align: center;
-    border-radius: 4px;
-}
-
-.cardnews img {
-    width: 100%;
-}
-
-.cardnews h3{
-    padding-top: 5px;
-    font-size: 24px;
-}
-.cardnews p{
-    font-size: 16px;
-}
-
-.next-games{
-    width: 25%;   
-}
-
-.next-games h2 {
-    font-size: 25px;
-    color: white;
-    margin-bottom: 25px;
-}
-
-.next-games-bg{
-    height: auto;
-    background: var(--gradient); 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 2em 0;
-    box-shadow: 0px 0px 10px rgb(0, 0, 0),0px 0px 30px rgb(0, 0, 0);
-}
-.next-games-match{
-    width: 100%;
-    height: 6.15em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* background-color: red; */
-    font-weight: 700;
-    color: #fff;
+@media screen and (max-width: 1100px) {
+    .cabecalho {
+        position: relative;
+    }
     
+    .menu {
+        display: none;
+
+        position: absolute;
+        top: 80px;
+        right: 0px;
+
+        height: 400px;
+
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: #1E1C21;
+        align-items: center;
+
+    }
+
+    .menu-ativo {
+        display: flex;
+    }
+
+    #barras {
+        display: inline-block;
+    }
 }
-.teams{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
+
+@media screen and (max-width: 1000px) {
+    .conteudo-sobre {
+        flex-direction: column;
+    }
 }
-.next-games-match div{
-    display: flex;
-    align-items: center;
-}
-.next-games-match img{
-    max-width: 2.5em;
-}
-.next-games-match > p{
-    margin-top: 1em;
+
+@media screen and (max-width: 768px) {
+    header {
+        background-color: darkblue;
+    }
+
+    .logo {
+        width: 100px;
+    }
 }

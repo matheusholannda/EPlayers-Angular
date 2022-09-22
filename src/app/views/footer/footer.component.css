@@ -1,49 +1,58 @@
-.links-footer {
-    width: 33%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.links {
-    color: white;
-}
-
-.links a {
-    text-decoration: none;
-    color: white;
-}
-
 footer {
     background-color: black;
 }
 
 .rodape {
-    padding: 2em 0;
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+
+    color: white;
+}
+
+.links-footer {
+    width: 30%;
     display: flex;
     justify-content: space-between;
 }
 
-.logo-rodape {
-    width: 250px;
+.links-footer h2 {
+    font-family: 'Titillium Web';
+    font-size: 24px;
 }
 
-.sociais h2 {
+.links-footer a {
+    font-family: 'Titillium Web';
+    font-size: 14px;
     color: white;
+    text-decoration: none;
 }
 
-.sociais > h2 {
-    font-size: 0.875em;
-    margin-bottom: 0.5em;
+.links-footer a:hover {
+    color: #0d6efd;
+}
+
+.sociais {
+    width: 31%;
+}
+
+.sociais p {
+    font-family: 'Titillium Web';    
 }
 
 .sociais form {
-    display: flex;    
-    margin-bottom: 0.5em;
+    width: 100%;
+    display: flex; 
+    justify-content: space-between;
+    margin-bottom: 10px;
 }
 
 .sociais input[type="email"]{
-    height: 2.3125em;
-    width: 12.1875em;    
+    height: 37px;
+    width: 65%;  
+    border-radius: 0px; 
+    border-style: none; 
+    text-indent: 5px;
 }
 
 .sociais input[type="email"]::placeholder {
@@ -51,12 +60,13 @@ footer {
     font-weight: bold;
 }
 
-.sociais input[type="submit"]{
-    width: 9.75em;
+.sociais button{
+    width: 35%;
     color: white;
-    background-color: #8326EF;
+    background-color: #001F70;
     border: none;
-    font-size: 1.1em;
+    font-family: 'Titillium Web';
+    font-weight: 600;
 }
 
 .siga-nos {
@@ -64,4 +74,9 @@ footer {
     align-items: center;
     justify-content: space-between;
     margin-top: 0.8em;
+}
+
+.siga-nos h2 {
+    font-family: 'Titillium Web';
+    font-size: 23px;
 }

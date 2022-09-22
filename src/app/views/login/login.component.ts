@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { Login } from 'src/app/models/login';
+import { User } from 'src/app/models/user';
 import { LoginService } from 'src/app/services/login.service';
 
 @Component({
@@ -10,22 +9,20 @@ import { LoginService } from 'src/app/services/login.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private router: Router, private loginService: LoginService) { }
+  constructor(private loginService: LoginService) { }
 
   ngOnInit(): void {
   }
+  
+  userModel = new User()
+  mensagem = ""
 
-  loginModel = new Login();
-
-  mensagem = "";
-
-  onSubmit() {
-    this.loginService.login(this.loginModel).subscribe( (response) => {
-      this.mensagem = "Login com sucesso!";
-      this.router.navigateByUrl("/");
-    }, (error) => {
-      console.log(error)
-      this.mensagem = error.error;
+  receberDados() {
+    this.loginService.login(this.userModel).subscribe( (response) => {
+      this.mensagem = "Bem vindo " + response.body.user.nome + "!"
+    }, (responseErro) => {
+      console.log(responseErro); 
+      this.mensagem = responseErro.error
     } )
   }
 }
